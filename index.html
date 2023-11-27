@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<style>
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .about-img {
+        width: 600px;
+        /* Adjust the width and height as needed */
+        height: 700px;
+        overflow: hidden;
+        border-radius: 60%;
+        margin: left;
+        /* Make it a circle */
+        margin-right: 40px;
+    }
+
+    .about-img img {
+        width: 100%;
+        /* Make the image fill the container */
+        height: 100%;
+        display: block;
+    }
+
+    .about-text {
+        max-width: 900px;
+    }
+
+    .about-text h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Navbar styles */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+    }
+
+    .logo {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    /* Other responsive styles */
+    @media screen and (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navbar {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: #333;
+        }
+
+        .navbar.active {
+            display: flex;
+        }
+
+        .navbar a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .home-content {
+            text-align: center;
+        }
+
+        .about {
+            flex-direction: column;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 0;
+        }
+
+        .about-text {
+            max-width: 100%;
+        }
+
+        .services-list,
+        .portfolio-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .Technical-bars,
+        .radial-bars {
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .last-text {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+
+</style>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills1" style="--i:3">Skill</a>
+            <a href="#portfolio1" style="--i:4">Portfolio</a>
+            <a href="#contact" style="--i:5">Contact</a>
+            <a href="https://drive.google.com/file/d/1smNeonhlj9Efy3JnCgBheai8kg2lwvd_/view?usp=sharing" style="--i:6"
+                target="_blank">Resume</a>
+
+        </nav>
+    </header>
+    <section class="home">
+       
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Shashank Gowda</h1>
+            <h3>I'm a <span class="text"></span></h3>
+            <p>I'm a talented backend developer and a fresher in the industry. <br> I have a strong passion for
+                both backend and frontend
+                development, and I'm eager to grow and excel in both areas</p>
+            <div class="home-sci">
+                <a href="https://www.facebook.com/profile.php?id=100049342447666" style="--i:7"><i
+                        class='bx bxl-facebook'></i> </a>
+                <a href="https://www.instagram.com/shashank_gowda._._/" style="--i:8"><i
+                        class='bx bxl-instagram'></i></a>
+                <a href="#" style="--i:9"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.linkedin.com/in/shashank-83623220b/" style="--i:10"><i
+                        class='bx bxl-linkedin'></i></a>
+                        
+            </div>
+            
+            <a href="#about" class="btn-box">More About Me</a>
+        </div>
+        <div class="profile_img">
+            <img src="profile3-modified.png" />
+        </div>
+    </section>
+    <section class="about" id="about">
+        
+        <div class="about-img">
+            <img src="profile-modified.png" alt="no image">
+        </div>
+        <div class="about-text">
+            <h2>About<span>Me</span></h2>
+            <h4>Back-end Developer!</h4>
+            <p>I am a passionate and dedicated backend developer with a strong foundation in Django and Python. As a
+                fresher in the
+                industry, I bring a fresh perspective and an eagerness to learn and grow. My journey into backend
+                development started
+                with my fascination for creating robust and efficient web applications. I have developed a solid
+                understanding of Django
+                framework, leveraging its powerful features to build scalable and secure web solutions.
+
+                My proficiency in Python allows me to write clean and optimized code, ensuring high performance and
+                maintainability. I
+                enjoy working on the server-side, implementing RESTful APIs, handling data models, and integrating
+                various third-party
+                libraries and services. I have a good grasp of database management and design, and I am comfortable
+                working with SQL and
+                ORM.
+
+                During my academic projects and personal initiatives, I have honed my problem-solving skills and
+                collaborated
+                effectively in a team environment. I have a strong attention to detail, ensuring that my code meets
+                industry standards
+                and follows best practices. I am constantly exploring new technologies and industry trends to stay
+                up-to-date and
+                enhance my skills.
+
+                As a backend developer, I thrive in tackling complex challenges and finding efficient solutions. I am
+                excited to
+                contribute my skills and enthusiasm to a dynamic team where I can further develop my expertise and make
+                a meaningful
+                impact on innovative projects."</p>
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+    </section>
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-title">My <span>Services</span></h1>
+                <div class="services-list">
+                    <div>
+
+                        <i class="bx bxl-python" style="color:#00eeff"></i>
+                        <h2>Python Full-Stack</h2>
+                        <p>With extensive experience in Python, I have honed my skills and proficiency in the language.
+
+                            Apart from Python, I also possess knowledge in a diverse range of areas.
+
+                            My passion for learning drives me to explore and excel in various domains beyond Python.
+                            As an experienced Python enthusiast, I've delved into various aspects of the language,
+                            mastering its diverse
+                            applications.
+
+                            From web development to data analysis, my journey with Python has equipped me with a
+                            versatile skill set.
+
+                            My passion for problem-solving and automation has driven me to explore advanced Python
+                            libraries and frameworks.
+
+                        </p>
+                        <a href="#" class="read">learn more</a>
+                    </div>
+                    <div>
+
+                        <i class="bx bxl-django" style="color:#00eeff"></i>
+                        <h2>Django Backend-Developer</h2>
+                        <p>As an experienced Django Backend-Developer, I have a strong command over building robust and
+                            scalable web applications.
+                            My expertise in Django allows me to design efficient database schemas and create
+                            well-structured APIs for seamless
+                            frontend interactions.
+                            With a proven track record of successful project deliveries, I am confident in my ability to
+                            tackle complex backend
+                            challenges.
+                            I continuously stay updated with the latest Django advancements, ensuring I can implement
+                            cutting-edge features and
+                            functionalities.
+                        </p>
+                        <a href="#" class="read">learn more</a>
+                    </div>
+                    <div>
+                        <i class="bx bxl-android" style="color:#00eeff"></i>
+                        <h2>Android Application Development</h2>
+                        <p>I have a strong background in Android app development with several years of experience.
+                            Throughout my career, I have successfully delivered numerous Android applications to clients
+                            and users.
+                            I am well-versed in various programming languages and frameworks used in Android
+                            development.
+                            My expertise includes designing user-friendly interfaces and implementing robust
+                            functionalities.
+                            I am passionate about staying up-to-date with the latest trends and technologies in the
+                            Android development ecosystem.</p>
+                        <a href="#" class="read">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h1 class="sub-title">My<span>Skills</span></h1>
+    <section id="skills1" class="skills1">
+        <div class="container1" id="skills">
+            <h1 class="heading1">Technical skills</h1>
+            <div class="Technical-bars">
+                <div class="bar"><i style="color: #c95d2e" class="bx bxl-html5"></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color:#147bbc" class='bx bxl-css3'></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color:#b0bc1e" class='bx bxl-javascript'></i>
+                    <div class="info">
+                        <span>Javascript</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color:#c32ec9" class="bx bxl-python"></i>
+                    <div class="info">
+                        <span>Python</span>
+                    </div>
+                    <div class="progress-line python">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color:#69bcbc" class="bx bxl-django"></i>
+                    <div class="info">
+                        <span>Django</span>
+                    </div>
+                    <div class="progress-line django">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color:#7c3a8e" class="bx bxl-flask"></i>
+                    <div class="info">
+                        <span>Flask</span>
+                    </div>
+                    <div class="progress-line flask">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container1">
+            <h1 class="headings1">Professional Skills</h1>
+            <div class="radial-bars">
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"> </circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">Creativity</div>
+                </div>
+
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"> </circle>
+                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">65%</div>
+                    <div class="text">Communication</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"> </circle>
+                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text">Problem Solving</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"> </circle>
+                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text">TeamWork</div>
+                </div>
+            </div>
+    </section>
+    <section id="portfolio1" class="portfolio1">
+        <div id="portfolio">
+            <div class="main-text">
+                <h2>Latest <span>Project</span></h2>
+                <div class="portfolio-content">
+                    <div class="row">
+                        <img src="django.png">
+                        <div class="layer">
+                            <h5>UI/UX Design</h5>
+                            <p>As a backend developer, I thrive in tackling complex challenges and finding efficient
+                                solutions. I am excited to contribute my skills and enthusiasm to a dynamic team where I
+                                can
+                                further develop my</p>
+                            <a href="#"><i class='bx bx-link-external' style="color: aliceblue;"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="Garbage1.jpg">
+                        <div class="layer">
+                            <h5>UI/UX Design</h5>
+                            <p>As a backend developer, I thrive in tackling complex challenges and finding efficient
+                                solutions. I am a meaningful</p>
+                            <a href="#"><i class='bx bx-link-external' style="color: aliceblue;"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="nndl.png">
+                        <div class="layer">
+                            <h5>UI/UX Design</h5>
+                            <p>As a backend developer, I thrive in tackling complex challenges and finding efficient
+                                solutions. I am</p>
+                            <a href="#"><i class='bx bx-link-external' style="color: aliceblue;"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+            <h4>Let's work Together</h4>
+            <p>As a backend developer, I thrive in tackling complex challenges and finding efficient
+                solutions. I am
+                excited to
+                contribute my skills and enthusiasm to a dynamic team where I can further develop my
+                expertise and make
+                a meaningful</p>
+            <div class="contact-list">
+                <li><i class='bx bxs-send'></i>myselfshashankgowda@gmail.com</li>
+                <li><i class='bx bxs-phone'></i>9008968243</li>
+            </div>
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/profile.php?id=100049342447666" target="_blank"><i
+                        class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/shashank_gowda._._/" target="_blank"><i
+                        class='bx bxl-instagram'></i></a>
+                <a href="https://twitter.com/cse000111" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.linkedin.com/in/shashank-83623220b/" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" placeholder="Enter Your Name" required>
+                <input type="email" placeholder="Enter Your Email" required>
+                <input type="text" placeholder="Enter Your Subject">
+                <textarea name="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <input type="submit" value="Submit" class="send">
+            </form>
+        </div>
+
+    </section>
+
+
+    <div class="last-text">
+        <p>Developed with love by Shashank Gowda @ 2023</p>
+    </div>
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("r4qD7TLf3cXz9iJow"); // Replace "YOUR_USER_ID" with your actual EmailJS User ID
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get the form data
+            var form = event.target;
+            var formData = new FormData(form);
+
+            // Prepare the email data
+            var emailParams = {
+                from_name: formData.get("name"),
+                reply_to: formData.get("email"),
+                subject: formData.get("subject"),
+                message: formData.get("message")
+            };
+
+            // Send the email using EmailJS
+            emailjs.send("service_fn6kbzk", "template_scgzo3h", emailParams)
+                .then(function (response) {
+                    console.log("Email sent successfully!", response);
+                    alert("Message Sent")
+                    // You can add a success message or redirect to a thank-you page here.
+                }, function (error) {
+                    console.log("Failed to send email:", error);
+                    alert("You can't send the Messaage")
+                    // You can display an error message to the user here.
+                });
+        });
+
+        function viewResume() {
+            // Replace "path/to/your/resume.pdf" with the actual path to your PDF file
+            var pdfPath = "SHASHANKs_RESUME.pdf";
+            window.open(pdfPath, "_blank");
+        }
+
+    </script>
+
+
+    <script src="main.js"></script>
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHASHANK GOWDA - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <h1>SHASHANK GOWDA</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home">
+        <div class="container">
+            <h2>Welcome to my Portfolio!</h2>
+            <p>I am a Python Developer with expertise in Django, Flask, and Java Android Development. I am passionate
+                about
+                coding and have a strong interest in solving real-world problems using technology.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="profile3.jpg" alt="Profile Picture">
+                <p>I am a Computer Science and System Engineering graduate from Reva University. During my university
+                    journey, I have
+                    been actively involved in extracurricular activities, excelling as a Kabaddi player and an athlete
+                    in various
+                    sports.</p>
+                <p>Besides my athletic pursuits, I am a skilled chess player and a participant in numerous hackathons,
+                    where I
+                    contribute to innovative projects using my problem-solving skills.</p>
+                <p>I have earned certificates in Server-side Development with NodeJS, SQL for Data Science, HTML, CSS,
+                    and
+                    JavaScript for Web Developers, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skill-card">
+                <h3>Python Development</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Django</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Flask</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Java Android Development</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 75%;">75%</div>
+                </div>
+            </div>
+            <!-- Add more skills here -->
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <!-- Add your project details here -->
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <!-- Add your experience details here -->
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-details">
+                <p>Email: <a href="mailto:myselfshashankgowda@gmail.com">myselfshashankgowda@gmail.com</a></p>
+                <p>Phone: 9008968243</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-profile">Your LinkedIn Profile</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/your-instagram-profile">Your Instagram Profile</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ... (same as the previous code) ... -->
+
+    <script>
+        // JavaScript to handle form submission and send a message using Fetch API
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+
+            fetch('/send_message', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data); // Display success message
+                    event.target.reset(); // Reset the form after submission
+                })
+                .catch(error => {
+                    console.error('Error sending message:', error);
+                });
+        });
+    </script>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myProgressBar"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
