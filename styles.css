@@ -17,7 +17,7 @@ body {
 }
 
 /* Navigation Bar Styles */
-nav {
+/* nav {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
@@ -43,7 +43,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-}
+} */
 
 /* Sections Styles */
 .section {

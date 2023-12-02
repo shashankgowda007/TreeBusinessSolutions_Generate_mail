@@ -43,131 +43,82 @@
         font-size: 2em;
         margin-bottom: 10px;
     }
-    body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-    }
+     body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-    /* Navbar styles */
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        background-color: #333;
-        color: white;
-    }
-
-    .logo {
-        text-decoration: none;
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 50%;
-    }
-
-    .navbar a {
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-    }
-
-    .menu-icon {
-        display: none;
-        cursor: pointer;
-        font-size: 24px;
-    }
-
-    /* Other responsive styles */
-    @media screen and (max-width: 768px) {
+        /* Navbar styles */
         .header {
-            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         .navbar {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            background-color: #333;
-        }
-
-        .navbar.active {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
         }
 
         .navbar a {
-            display: block;
-            margin-bottom: 10px;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
         }
 
         .menu-icon {
-            display: block;
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
         }
 
-        .home-content {
-            text-align: center;
-        }
+        /* Other responsive styles */
+        @media screen and (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-        .about {
-            flex-direction: column;
-            padding: 20px;
-            text-align: center;
-        }
+            .navbar {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: #333;
+            }
 
-        .about-img {
-            width: 100%;
-            height: auto;
-            margin: 20px 0;
-            border-radius: 0;
-        }
+            .navbar.active {
+                display: flex;
+            }
 
-        .about-text {
-            max-width: 100%;
-        }
+            .navbar a {
+                display: block;
+                margin-bottom: 10px;
+            }
 
-        .services-list,
-        .portfolio-content {
-            flex-direction: column;
-            text-align: center;
+            .menu-icon {
+                display: block;
+            }
         }
-
-        .Technical-bars,
-        .radial-bars {
-            flex-direction: column;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        .last-text {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
-    }
 
 </style>
 <body>
@@ -181,8 +132,11 @@
             <a href="#contact" style="--i:5">Contact</a>
             <a href="https://drive.google.com/file/d/1smNeonhlj9Efy3JnCgBheai8kg2lwvd_/view?usp=sharing" style="--i:6"
                 target="_blank">Resume</a>
-
+            
         </nav>
+        <div class="hamburger">
+            <img src="./hambur3.webp" height="35px" />
+        </div>
     </header>
     <section class="home">
        
@@ -212,7 +166,7 @@
     </section>
     <section class="about" id="about">
         
-        <div class="about-img">
+        <div class="about_img">
             <img src="profile-modified.png" alt="no image">
         </div>
         <div class="about-text">
@@ -451,6 +405,7 @@
     <section class="contact" id="contact">
         <div class="contact-text">
             <h2>Contact <span>Me</span></h2>
+            <div class="work">
             <h4>Let's work Together</h4>
             <p>As a backend developer, I thrive in tackling complex challenges and finding efficient
                 solutions. I am
@@ -471,7 +426,9 @@
                 <a href="https://www.linkedin.com/in/shashank-83623220b/" target="_blank"><i
                         class='bx bxl-linkedin'></i></a>
             </div>
+            </div>
         </div>
+        <div class="work">
         <div class="contact-form">
             <form id="contactForm">
                 <input type="text" placeholder="Enter Your Name" required>
@@ -480,8 +437,9 @@
                 <textarea name="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
                 <input type="submit" value="Submit" class="send">
             </form>
+        
         </div>
-
+    </div>
     </section>
 
 

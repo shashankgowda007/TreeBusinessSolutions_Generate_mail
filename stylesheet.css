@@ -36,7 +36,7 @@ body {
     animation: slideRight 1s ease forwards;
 }
 
-.navbar a {
+/* .navbar a {
     display: inline-block;
     font-size: 25px;
     color: #fff;
@@ -47,12 +47,12 @@ body {
     opacity: 0;
     animation: slideTop .52 ease forwards;
     animation-delay: calc(.2s * var(--i));
-}
+} */
 
-.navbar a:hover {
+/* .navbar a:hover {
     color: #0ef;
 
-}
+} */
 
 .home {
     position: relative;
@@ -79,7 +79,48 @@ body {
     max-width: 600px;
     /* display: flex; */
 }
-
+@media screen and (max-width:629px){
+    .home-content{
+        padding-top: 3rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .profile_img img {
+        margin-top:25px;
+        height: 350px;
+        width: 300px;
+    }
+}
+@media screen and (max-width:700px) {
+    .about_img img {
+        margin-top: 25px;
+        height: 250px;
+        width: 300px;
+    }
+}
+@media screen and (max-width:700px) {
+    .container1  {
+        margin-top: 8rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .portfolio1 {
+        margin-top: 15rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .portfolio-content {
+        margin-top: 3rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .work {
+        margin-top:25px;
+         margin-left: 12px;
+         margin-right: 12px;
+         
+    }
+}
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
@@ -88,7 +129,12 @@ body {
     animation-delay: .7s;
 
 }
-
+.hamburger img{
+    align-items: center;
+    justify-content: center;
+    /* display: hidden; */
+    color: white;
+}
 .home-content h3:nth-of-type(2) {
     margin-bottom: 30px;
     animation: slideTop 1s ease forwards;
@@ -962,9 +1008,9 @@ form textarea {
         padding: 20px 5%;
     }
 
-    .navbar a {
+    /* .navbar a {
         margin-left: 20px;
-    }
+    } */
 
     .home-content h3 {
         font-size: 24px;
